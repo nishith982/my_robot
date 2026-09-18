@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>my_robot</name>
+  <version>0.0.0</version>
+  <description>Differential drive robot package with simulation, navigation, SLAM, and perception support.</description>
+  <maintainer email="my_email@email.com">Josh Newans</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- ─── Core ROS2 launch infrastructure ─────────────────────────────── -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <!-- ─── Robot description ────────────────────────────────────────────── -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <!-- ─── Simulation (launch_sim.launch.py) ────────────────────────────── -->
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_image</exec_depend>
+
+  <!-- ─── ros2_control (launch_sim.launch.py / launch_robot.launch.py) ─── -->
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>ros2controlcli</exec_depend>
+  <exec_depend>ign_ros2_control</exec_depend>
+
+
+  <!-- ─── Velocity multiplexing ────────────────────────────────────────── -->
+  <exec_depend>twist_mux</exec_depend>
+
+  <!-- ─── Joystick / keyboard teleoperation ────────────────────────────── -->
+  <exec_depend>joy</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+  <exec_depend>teleop_twist_keyboard</exec_depend>
+  <exec_depend>twist_stamper</exec_depend>
+
+  <!-- ─── SLAM (online_async_launch.py) ────────────────────────────────── -->
+  <exec_depend>slam_toolbox</exec_depend>
+
+  <!-- ─── Navigation / Nav2 ────────────────────────────────────────────── -->
+  <exec_depend>nav2_bringup</exec_depend>
+
+  <!-- ─── LiDAR (rplidar.launch.py) ────────────────────────────────────── -->
+  <exec_depend>rplidar_ros</exec_depend>
+
+  <!-- ─── Camera (camera.launch.py) ────────────────────────────────────── -->
+  <exec_depend>v4l2_camera</exec_depend>
+
+  <!-- ─── Ball tracker (ball_tracker.launch.py) ────────────────────────── -->
+  <exec_depend>ball_tracker</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
