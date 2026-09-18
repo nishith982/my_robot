@@ -28,8 +28,7 @@ The image shows the robot inside the Gazebo Cafe world alongside the RViz2 view 
 
 A recorded demonstration shows the robot receiving a destination through the **2D Goal Pose** tool in RViz2. Nav2 computes a global path over the saved Cafe map, the local controller follows that path while avoiding obstacles, and the robot drives autonomously to the selected destination.
 
-[▶️ Watch the Autonomous Navigation Demo]((https://drive.google.com/drive/folders/1nQtYTKX7BpPHDnkdo-Ptr60J_1BOaMb2?usp=sharing))
-
+[▶️ Watch the Autonomous Navigation Demo](https://drive.google.com/drive/folders/1nQtYTKX7BpPHDnkdo-Ptr60J_1BOaMb2?usp=sharing)
 
 ---
 
